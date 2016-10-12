@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="279.0" prefWidth="600.0" style="-fx-background-color: #222222;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="259.0" layoutY="14.0" text="Progress" textFill="#fafafa">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutY="196.0" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: #424242;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="504.0" layoutY="23.0" ripplerFill="#2a65e4" style="-fx-background-color: #29B6F6;" text="Stop" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="430.0" layoutY="23.0" ripplerFill="#29aaeb" style="-fx-background-color: #29B6F6;" text="Pause" textFill="WHITE" />
+            <Label layoutX="32.0" layoutY="28.0" text="After done" textFill="#fafafa" />
+            <JFXComboBox layoutX="111.0" layoutY="23.0" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #212121;" />
+            <JFXCheckBox checkedColor="#287eda" layoutX="230.0" layoutY="28.0" text="Open output folder" textFill="#fafafa" unCheckedColor="#fafafa" />
+         </children>
+      </Pane>
+      <ProgressBar layoutX="32.0" layoutY="117.0" prefHeight="23.0" prefWidth="536.0" progress="0.37" />
+      <Label layoutX="34.0" layoutY="146.0" text="Elapsed time :" textFill="#fafafa" />
+      <Label layoutX="341.0" layoutY="146.0" text="Remaining time :" textFill="#fafafa" />
+      <Label layoutX="34.0" layoutY="74.0" text="File name :" textFill="#fafafa" />
+   </children>
+</AnchorPane>
