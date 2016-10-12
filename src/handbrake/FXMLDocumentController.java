@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 /**
  *
  * @author The Game
+ * Time to play the game
  */
 public class FXMLDocumentController implements Initializable {
     
