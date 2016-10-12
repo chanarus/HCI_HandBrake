@@ -13,7 +13,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="1558.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="1558.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.FXMLDocumentController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="14.0" onMouseEntered="#handleButtonAction" ripplerFill="#2196f3" style="-fx-background-color: #424242; -fx-border-radius: 1px;" text="Add Video" textFill="#fafafa">
@@ -34,24 +34,24 @@
             <Tooltip text="Cut a section of a video" />
          </tooltip>
       </JFXButton>
-      <Label layoutX="39.0" layoutY="496.0" text="Profile" textFill="#fafafa">
+      <Label layoutX="36.0" layoutY="570.0" text="Profile" textFill="#fafafa">
          <tooltip>
             <Tooltip text="Output format of the video" />
          </tooltip>
       </Label>
-      <Label layoutX="36.0" layoutY="539.0" text="Destination" textFill="#fafafa">
+      <Label layoutX="36.0" layoutY="628.0" text="Destination" textFill="#fafafa">
          <tooltip>
             <Tooltip text="Destination of the out put file" />
          </tooltip>
       </Label>
-      <JFXComboBox layoutX="167.0" layoutY="491.0" prefHeight="31.0" prefWidth="516.0" style="-fx-background-color: #424242;" />
-      <JFXTextField focusColor="#fafafa" layoutX="167.0" layoutY="531.0" maxWidth="516.0" minWidth="516.0" prefHeight="37.0" prefWidth="516.0" style="-fx-background-color: #424242;" unFocusColor="#fafafa" />
-      <JFXButton buttonType="RAISED" layoutX="708.0" layoutY="534.0" ripplerFill="#259ffc" style="-fx-background-color: #424242;" text="Browse" textFill="#fafafa" />
-      <JFXButton buttonType="RAISED" layoutX="792.0" layoutY="534.0" ripplerFill="#2196f3" style="-fx-background-color: #424242;" text="Open Folder" textFill="#fafafa">
+      <JFXComboBox layoutX="133.0" layoutY="565.0" prefHeight="31.0" prefWidth="550.0" style="-fx-background-color: #424242;" />
+      <JFXTextField focusColor="#fafafa" layoutX="133.0" layoutY="620.0" maxWidth="550.0" minWidth="516.0" prefHeight="37.0" prefWidth="550.0" style="-fx-background-color: #424242;" unFocusColor="#fafafa" />
+      <JFXButton buttonType="RAISED" layoutX="711.0" layoutY="623.0" ripplerFill="#259ffc" style="-fx-background-color: #424242;" text="Browse" textFill="#fafafa" />
+      <JFXButton buttonType="RAISED" layoutX="794.0" layoutY="623.0" ripplerFill="#2196f3" style="-fx-background-color: #424242;" text="Open Folder" textFill="#fafafa">
          <tooltip>
             <Tooltip text="Open output destination" />
          </tooltip></JFXButton>
-      <TabPane layoutX="28.0" layoutY="69.0" prefHeight="403.0" prefWidth="899.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="29.0" layoutY="147.0" prefHeight="403.0" prefWidth="899.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab style="-fx-background-color: #BDBDBD;" text="Picture">
             <content>
@@ -188,7 +188,7 @@
             </Tab>
         </tabs>
       </TabPane>
-      <Pane layoutX="939.0" layoutY="69.0" prefHeight="403.0" prefWidth="230.0" style="-fx-background-color: #FAFAFA;">
+      <Pane layoutX="937.0" layoutY="147.0" prefHeight="403.0" prefWidth="230.0" style="-fx-background-color: #FAFAFA;">
          <children>
             <Label layoutX="75.0" layoutY="14.0" text="Presets">
                <font>
@@ -209,20 +209,32 @@
             <JFXButton layoutX="159.0" layoutY="358.0" text="Setting" />
          </children>
       </Pane>
-      <JFXButton fx:id="convert_btn" buttonType="RAISED" layoutX="1008.0" layoutY="507.0" onAction="#convertButtonAction" prefHeight="62.0" prefWidth="217.0" ripplerFill="#1a92ee" style="-fx-background-color: #424242;" text="CONVERT" textFill="#18a5fc">
+      <JFXButton fx:id="convert_btn" buttonType="RAISED" layoutX="1006.0" layoutY="589.0" onAction="#convertButtonAction" prefHeight="62.0" prefWidth="217.0" ripplerFill="#1a92ee" style="-fx-background-color: #424242;" text="CONVERT" textFill="#18a5fc">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="342.0" fitWidth="310.0" layoutX="1208.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="368.0" fitWidth="368.0" layoutX="1177.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imgs/player.JPG" />
          </image>
       </ImageView>
-      <Label layoutX="1208.0" layoutY="69.0" text="Preview" textFill="#fafafa">
+      <Label layoutX="1196.0" layoutY="60.0" text="Preview" textFill="#fafafa">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <Pane layoutX="28.0" layoutY="60.0" prefHeight="74.0" prefWidth="1139.0" style="-fx-background-color: #424242;">
+         <children>
+            <Label layoutX="83.0" layoutY="27.0" text="Source Name:" textFill="#fafafa" />
+            <Label layoutX="608.0" layoutY="27.0" text="Source Format:" textFill="#fafafa" />
+            <Label layoutX="884.0" layoutY="27.0" text="Duration:" textFill="#fafafa" />
+            <ImageView fitHeight="53.0" fitWidth="61.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/video.JPG" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
     </children>
 </AnchorPane>
