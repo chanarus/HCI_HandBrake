@@ -5,8 +5,10 @@
  */
 package handbrake;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Set;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -25,6 +28,10 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+    public Label source_name_label;
+    public Label source_format_label;
+    String filename;
+    String filedetails;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -66,6 +73,39 @@ public class FXMLDocumentController implements Initializable {
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root2));  
                 stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
+    
+    /*
+    *Add a new source to the system
+    */
+    @FXML
+    private void addSourceButtonAction(ActionEvent event) {
+        try {
+            
+            FileChooser fileChooser = new FileChooser();
+            File selectedFile = fileChooser.showOpenDialog(null);
+            
+            if (selectedFile != null) {
+                filename = selectedFile.getName().toString();
+                filedetails = filename.substring(filename.lastIndexOf(".") + 1);
+                
+                source_name_label.setText(filename.substring(0,filename.lastIndexOf('.')));
+                source_format_label.setText(filedetails);
+            }
+            else {
+                source_name_label.setText("File selection cancelled.");
+            }
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
+    
+    private void btnHoverAction(ActionEvent event) {
+        try {
+            
         } catch(Exception e) {
            e.printStackTrace();
           }

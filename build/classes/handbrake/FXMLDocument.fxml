@@ -15,8 +15,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="1558.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="handbrake.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="14.0" onMouseEntered="#handleButtonAction" ripplerFill="#2196f3" style="-fx-background-color: #424242; -fx-border-radius: 1px;" text="Add Video" textFill="#fafafa">
+      <JFXButton fx:id="add_source_btn" buttonType="RAISED" layoutX="29.0" layoutY="14.0" onAction="#addSourceButtonAction" ripplerFill="#2196f3" style="-fx-background-color: #424242; -fx-border-radius: 1px;" text="Add Video" textFill="#fafafa">
          <tooltip>
             <Tooltip text="Add a new video" />
          </tooltip>
@@ -224,16 +223,17 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Pane layoutX="28.0" layoutY="60.0" prefHeight="74.0" prefWidth="1139.0" style="-fx-background-color: #424242;">
+      <Pane layoutX="29.0" layoutY="60.0" prefHeight="74.0" prefWidth="1139.0" style="-fx-background-color: #424242;">
          <children>
             <Label layoutX="83.0" layoutY="27.0" text="Source Name:" textFill="#fafafa" />
-            <Label layoutX="608.0" layoutY="27.0" text="Source Format:" textFill="#fafafa" />
-            <Label layoutX="884.0" layoutY="27.0" text="Duration:" textFill="#fafafa" />
+            <Label layoutX="818.0" layoutY="27.0" text="Source Format:" textFill="#fafafa" />
             <ImageView fitHeight="53.0" fitWidth="61.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/video.JPG" />
                </image>
             </ImageView>
+            <Label fx:id="source_name_label" layoutX="189.0" layoutY="27.0" textFill="#fafafa" />
+            <Label fx:id="source_format_label" layoutX="931.0" layoutY="27.0" textFill="#fafafa" />
          </children>
       </Pane>
     </children>
