@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -30,6 +32,8 @@ public class FXMLDocumentController implements Initializable {
     private Label label;
     public Label source_name_label;
     public Label source_format_label;
+    public TextField destination_txt;
+        
     String filename;
     String filedetails;
     
@@ -94,6 +98,8 @@ public class FXMLDocumentController implements Initializable {
                 
                 source_name_label.setText(filename.substring(0,filename.lastIndexOf('.')));
                 source_format_label.setText(filedetails);
+                
+                
             }
             else {
                 source_name_label.setText("File selection cancelled.");
@@ -103,8 +109,33 @@ public class FXMLDocumentController implements Initializable {
           }
     }
     
-    private void btnHoverAction(ActionEvent event) {
+    @FXML
+    private void browseOutputButtonAction(ActionEvent event) {
         try {
+            DirectoryChooser chooser = new DirectoryChooser();
+            chooser.setTitle("JavaFX Projects");
+            File defaultDirectory = new File("C:\\test");
+            chooser.setInitialDirectory(defaultDirectory);
+            File selectedDirectory = chooser.showDialog(null);
+            
+            if (selectedDirectory != null) {
+                 destination_txt.setText(selectedDirectory.getAbsolutePath());
+            }
+            
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+    }
+    
+    @FXML
+    private void openOutputButtonAction(ActionEvent event) {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            
+            String userDirectoryString = destination_txt.getText();
+            File userDirectory = new File(userDirectoryString);
+            fileChooser.setInitialDirectory(userDirectory);
+            File selectedFile = fileChooser.showOpenDialog(null);
             
         } catch(Exception e) {
            e.printStackTrace();

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
 <?import com.jfoenix.validation.*?>
@@ -44,9 +46,8 @@
          </tooltip>
       </Label>
       <JFXComboBox layoutX="133.0" layoutY="565.0" prefHeight="31.0" prefWidth="550.0" style="-fx-background-color: #424242;" />
-      <JFXTextField focusColor="#fafafa" layoutX="133.0" layoutY="620.0" maxWidth="550.0" minWidth="516.0" prefHeight="37.0" prefWidth="550.0" style="-fx-background-color: #424242;" unFocusColor="#fafafa" />
-      <JFXButton buttonType="RAISED" layoutX="711.0" layoutY="623.0" ripplerFill="#259ffc" style="-fx-background-color: #424242;" text="Browse" textFill="#fafafa" />
-      <JFXButton buttonType="RAISED" layoutX="794.0" layoutY="623.0" ripplerFill="#2196f3" style="-fx-background-color: #424242;" text="Open Folder" textFill="#fafafa">
+      <JFXButton fx:id="browse_btn" buttonType="RAISED" layoutX="711.0" layoutY="623.0" onAction="#browseOutputButtonAction" ripplerFill="#259ffc" style="-fx-background-color: #424242;" text="Browse" textFill="#fafafa" />
+      <JFXButton buttonType="RAISED" layoutX="794.0" layoutY="623.0" onAction="#openOutputButtonAction" ripplerFill="#2196f3" style="-fx-background-color: #424242;" text="Open Folder" textFill="#fafafa">
          <tooltip>
             <Tooltip text="Open output destination" />
          </tooltip></JFXButton>
@@ -236,5 +237,7 @@
             <Label fx:id="source_format_label" layoutX="931.0" layoutY="27.0" textFill="#fafafa" />
          </children>
       </Pane>
+      <WebView fx:id="web" layoutX="1177.0" layoutY="97.0" prefHeight="359.0" prefWidth="368.0" style="visibility: none;" />
+      <TextField fx:id="destination_txt" layoutX="133.0" layoutY="623.0" prefHeight="31.0" prefWidth="550.0" />
     </children>
 </AnchorPane>
