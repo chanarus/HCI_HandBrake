@@ -3,6 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/*
+ *This project has been done by a undergraduat student group of curtin univercity
+ */
 package handbrake;
 
 import javafx.application.Application;

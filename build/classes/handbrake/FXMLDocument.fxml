@@ -82,6 +82,12 @@
                         </ImageView>
                         <JFXButton buttonType="RAISED" layoutX="45.0" layoutY="262.0" ripplerFill="#30abf2" style="-fx-background-color: #E0E0E0; -fx-border-radius: 1px;" text="Apply" />
                         <JFXButton buttonType="RAISED" layoutX="129.0" layoutY="262.0" ripplerFill="#30aaf1" style="-fx-background-color: #E0E0E0; -fx-border-radius: 1px;" text="Default" />
+                        <RadioButton layoutX="367.0" layoutY="99.0" mnemonicParsing="false" text="Custom">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="crop" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="365.0" layoutY="65.0" mnemonicParsing="false" text="Automatic" toggleGroup="$crop" />
                      </children>
                   </AnchorPane>
             </content>
